@@ -1,0 +1,36 @@
+<stylecopresultscache>
+  <version>11</version>
+  <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/06/2011 12:29:50</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>02/02/2012 08:08:07</timestamp>
+    <milliseconds>117</milliseconds>
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
+        <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <project key="-1023742567">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
+  <sourcecode name="ReplaceSpecialCharacters.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/06/2011 12:29:50</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>02/02/2012 08:21:59</timestamp>
+    <milliseconds>660</milliseconds>
+    <violations>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="StatementMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1119">
+        <context>The line contains unnecessary parenthesis.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+</stylecopresultscache>
