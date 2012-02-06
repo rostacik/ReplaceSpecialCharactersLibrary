@@ -46,12 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplaceSpecialCharactersExtensionsTests.cs" />
     <Compile Include="ReplaceSpecialCharactersTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ReplaceSpecialCharactersLibraryFullNET\ReplaceSpecialCharactersLibraryFullNET.csproj">
+    <ProjectReference Include="..\ReplaceSpecialCharactersLibraryFullNET\ReplaceSpecialCharactersLibrary.csproj">
       <Project>{141D8E30-BAF9-41A1-A171-779AB13BFD83}</Project>
-      <Name>ReplaceSpecialCharactersLibraryFullNET</Name>
+      <Name>ReplaceSpecialCharactersLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

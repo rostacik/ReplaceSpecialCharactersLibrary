@@ -4,18 +4,17 @@
     using ReplaceSpecialCharactersLibrary;
 
     [TestClass]
-    public class ReplaceSpecialCharactersTests
+    public class ReplaceSpecialCharactersExtensionsTests
     {
         [TestMethod]
-        public void diacritics_will_be_stripped_1()
+        public void extension_diacritics_will_be_stripped_1()
         {
             //arrange
             string input = "abľščťžýáíé";
             string output = string.Empty;
 
             //act
-            var specialChars = new ReplaceSpecialCharacters();
-            output = specialChars.RemoveDiacritics(input);
+            output = input.RemoveDiacritics();
 
             //assert
             Assert.IsNotNull(output);
@@ -23,15 +22,14 @@
         }
 
         [TestMethod]
-        public void spaces_will_be_replaced_with_default_string_1()
+        public void extension_spaces_will_be_replaced_with_default_string_1()
         {
             //arrange
             string input = "abcd efgh";
             string output = string.Empty;
 
             //act
-            var specialChars = new ReplaceSpecialCharacters();
-            output = specialChars.ReplaceSpaces(input);
+            output = input.ReplaceSpaces();
 
             //assert
             Assert.IsNotNull(output);
@@ -39,15 +37,14 @@
         }
 
         [TestMethod]
-        public void strip_and_replace_space_1()
+        public void extension_strip_and_replace_space_1()
         {
             //arrange
             string input = "abľščťžýáíé abľščťžýáíé abľščťžýáíé abľščťžýáíé abcd";
             string output = string.Empty;
 
             //act
-            var specialChars = new ReplaceSpecialCharacters();
-            output = specialChars.RemoveDiacriticsAndReplaceSpaces(input, "--");
+            output = input.RemoveDiacriticsAndReplaceSpaces("--");
 
             //assert
             Assert.IsNotNull(output);
@@ -55,15 +52,14 @@
         }
 
         [TestMethod]
-        public void diacritics_will_be_stripped_and_trimmed_1()
+        public void extension_diacritics_will_be_stripped_and_trimmed_1()
         {
             //arrange
             string input = "    abľščťžýáíé        ";
             string output = string.Empty;
 
             //act
-            var specialChars = new ReplaceSpecialCharacters();
-            output = specialChars.TrimAndRemoveDiacritics(input);
+            output = input.TrimAndRemoveDiacritics();
 
             //assert
             Assert.IsNotNull(output);
@@ -71,15 +67,14 @@
         }
 
         [TestMethod]
-        public void spaces_will_be_replaced_with_default_string_and_trimmed_1()
+        public void extension_spaces_will_be_replaced_with_default_string_and_trimmed_1()
         {
             //arrange
             string input = "     abcd efgh         ";
             string output = string.Empty;
 
             //act
-            var specialChars = new ReplaceSpecialCharacters();
-            output = specialChars.TrimAndReplaceSpaces(input);
+            output = input.TrimAndReplaceSpaces();
 
             //assert
             Assert.IsNotNull(output);
@@ -87,15 +82,14 @@
         }
 
         [TestMethod]
-        public void strip_and_replace_space_and_trim_1()
+        public void extension_strip_and_replace_space_and_trim_1()
         {
             //arrange
             string input = "    abľščťžýáíé abľščťžýáíé abľščťžýáíé abľščťžýáíé abcd          ";
             string output = string.Empty;
 
             //act
-            var specialChars = new ReplaceSpecialCharacters();
-            output = specialChars.TrimAndRemoveDiacriticsAndReplaceSpaces(input, "--");
+            output = input.TrimAndRemoveDiacriticsAndReplaceSpaces("--");
 
             //assert
             Assert.IsNotNull(output);
@@ -103,15 +97,14 @@
         }
 
         [TestMethod]
-        public void strip_and_replace_space_and_trim_2()
+        public void extension_strip_and_replace_space_and_trim_2()
         {
             //arrange
             string input = "    abľščťžýáíé abľščťžýáíé abľščťžýáíé abľščťžýáíé abcd          ";
             string output = string.Empty;
 
             //act
-            var specialChars = new ReplaceSpecialCharacters();
-            output = specialChars.TrimAndRemoveDiacriticsAndReplaceSpaces(input, null);
+            output = input.TrimAndRemoveDiacriticsAndReplaceSpaces(null);
 
             //assert
             Assert.IsNotNull(output);

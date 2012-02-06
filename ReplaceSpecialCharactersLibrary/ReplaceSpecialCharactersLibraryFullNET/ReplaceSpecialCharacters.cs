@@ -8,7 +8,7 @@
 // 
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace ReplaceSpecialCharactersLibraryFullNET
+namespace ReplaceSpecialCharactersLibrary
 {
     using System.Globalization;
     using System.Text;
@@ -80,7 +80,7 @@ namespace ReplaceSpecialCharactersLibraryFullNET
         }
 
         /// <summary>
-        /// Trims the and remove diacritics from supplied string.
+        /// Trims and removes diacritics from supplied string.
         /// </summary>
         /// <param name="inputString">The input string.</param>
         /// <returns>Input string with removed diacritics and removed spaces on start and end.</returns>
@@ -95,7 +95,7 @@ namespace ReplaceSpecialCharactersLibraryFullNET
         }
 
         /// <summary>
-        /// Trims the and replace spaces in given string with another string.
+        /// Trims and replaces the spaces in given string with another string.
         /// </summary>
         /// <param name="inputString">The input string.</param>
         /// <param name="replaceWith">The replace with string.</param>
@@ -118,7 +118,7 @@ namespace ReplaceSpecialCharactersLibraryFullNET
         }
 
         /// <summary>
-        /// Trims and remove diacritics and replace spaces with supplied string.
+        /// Trims and removes the diacritics and replace spaces with supplied string.
         /// </summary>
         /// <param name="inputString">The input string.</param>
         /// <param name="replaceWith">The replace with string.</param>
