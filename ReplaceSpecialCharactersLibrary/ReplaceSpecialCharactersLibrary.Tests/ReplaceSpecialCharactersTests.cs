@@ -117,5 +117,21 @@
             Assert.IsNotNull(output);
             Assert.AreEqual("    abľščťžýáíé abľščťžýáíé abľščťžýáíé abľščťžýáíé abcd          ", output);
         }
+
+        [TestMethod]
+        public void make_nice_url_from_string_1()
+        {
+            //arrange
+            string input = "    AAAAbľščťžýáíé abľščťžýáÍÍÍÍé abľščťžÝÝÝÝÝÝáíé abľšČČČČťžýáíé abcd  ERTFSSS        ";
+            string output = string.Empty;
+
+            //act
+            var specialChars = new ReplaceSpecialCharacters();
+            output = specialChars.MakeNiceURL(input);
+
+            //assert
+            Assert.IsNotNull(output);
+            Assert.AreEqual("aaaablsctzyaie-ablsctzyaiiiie-ablsctzyyyyyyaie-ablscccctzyaie-abcd--ertfsss", output);
+        }
     }
 }

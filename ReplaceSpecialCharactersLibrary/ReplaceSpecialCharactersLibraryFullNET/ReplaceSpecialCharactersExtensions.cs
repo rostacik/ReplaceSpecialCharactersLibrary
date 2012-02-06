@@ -83,5 +83,19 @@ namespace ReplaceSpecialCharactersLibrary
             var replace = new ReplaceSpecialCharacters();
             return replace.TrimAndRemoveDiacriticsAndReplaceSpaces(str, replaceSpaceWith);
         }
+
+        /// <summary>
+        /// Makes the nice URL from given string - trim leading,ending spaces,replace diacritics, replace spaces between words with something you choose.
+        /// </summary>
+        /// <param name="str">The input string.</param>
+        /// <param name="replaceSpaceWith">The replace space with string.</param>
+        /// <returns>
+        /// Output string.
+        /// </returns>
+        public static string MakeNiceURL(this string str, string replaceSpaceWith = "-")
+        {
+            var replace = new ReplaceSpecialCharacters();
+            return replace.MakeNiceURL(str, replaceSpaceWith);
+        }
     }
 }

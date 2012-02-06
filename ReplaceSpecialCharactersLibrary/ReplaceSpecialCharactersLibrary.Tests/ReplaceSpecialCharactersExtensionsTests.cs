@@ -1,7 +1,6 @@
 ﻿namespace ReplaceSpecialCharactersLibrary.Tests
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using ReplaceSpecialCharactersLibrary;
 
     [TestClass]
     public class ReplaceSpecialCharactersExtensionsTests
@@ -109,6 +108,21 @@
             //assert
             Assert.IsNotNull(output);
             Assert.AreEqual("    abľščťžýáíé abľščťžýáíé abľščťžýáíé abľščťžýáíé abcd          ", output);
+        }
+
+        [TestMethod]
+        public void extension_make_nice_url_from_string_1()
+        {
+            //arrange
+            string input = "    ABCD ef ľščťžýáíé        ";
+            string output = string.Empty;
+
+            //act
+            output = input.MakeNiceURL();
+
+            //assert
+            Assert.IsNotNull(output);
+            Assert.AreEqual("abcd-ef-lsctzyaie", output);
         }
     }
 }

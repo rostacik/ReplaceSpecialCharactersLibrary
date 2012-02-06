@@ -135,5 +135,24 @@ namespace ReplaceSpecialCharactersLibrary
 
             return inputString;
         }
+
+        /// <summary>
+        /// Makes the nice URL from given string - trim leading,ending spaces,replace diacritics, replace spaces between words with something you choose.
+        /// </summary>
+        /// <param name="inputString">The input string.</param>
+        /// <param name="replaceWith">The replace with string.</param>
+        /// <returns>Processed string.</returns>
+        public string MakeNiceURL(string inputString, string replaceWith = "-")
+        {
+            if ((inputString != null) && (!string.IsNullOrWhiteSpace(inputString)) && (!string.IsNullOrWhiteSpace(replaceWith)))
+            {
+                var outcome = this.RemoveDiacritics(inputString.Trim());
+                outcome = this.ReplaceSpaces(outcome, replaceWith).ToLower();
+
+                return outcome;
+            }
+
+            return inputString;
+        }
     }
 }
