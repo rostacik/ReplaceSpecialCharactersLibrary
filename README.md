@@ -9,6 +9,7 @@ To strip special characters from your string and replace it with nondiacritics v
 How to use this
 ---------------
 
+
 If you want to use instance of class :
 
 string input = "    AAAAb¾šèıáíé ab¾šèıáÍÍÍÍé ab¾šèİİİİİİáíé ab¾šÈÈÈÈıáíé abcd  ERTFSSS        ";
@@ -16,6 +17,7 @@ string output = string.Empty;
 
 var specialChars = new ReplaceSpecialCharacters();
 output = specialChars.MakeNiceURL(input);
+
 
 
 If you want to call functionality over string (this would use most of you, but please don't forget to add using ReplaceSpecialCharactersLibrary; in your code) :
