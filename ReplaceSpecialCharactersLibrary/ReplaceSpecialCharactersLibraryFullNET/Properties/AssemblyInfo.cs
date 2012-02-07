@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ReplaceSpecialCharactersLibraryFullNET")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("ReplaceSpecialCharactersLibrary")]
+[assembly: AssemblyDescription("Replace Special Characters Library and makes pretty URLs")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ReplaceSpecialCharactersLibraryFullNET")]
+[assembly: AssemblyCompany("dusan")]
+[assembly: AssemblyProduct("ReplaceSpecialCharactersLibrary")]
 [assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
