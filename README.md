@@ -1,4 +1,4 @@
-Replace Special Characters Library
+ï»¿Replace Special Characters Library
 ==================================
 
 Purpose of this code snippet
@@ -12,7 +12,7 @@ How to use this
 
 If you want to use instance of class :
 
-string input = "    AAAAb¾šèıáíé ab¾šèıáÍÍÍÍé ab¾šèİİİİİİáíé ab¾šÈÈÈÈıáíé abcd  ERTFSSS        ";
+string input = "    AAAAbÄ¾Å¡ÄÅ¥Å¾Ã½Ã¡Ã­Ã© abÄ¾Å¡ÄÅ¥Å¾Ã½Ã¡ÃÃÃÃÃ© abÄ¾Å¡ÄÅ¥Å¾ÃÃÃÃÃÃÃ¡Ã­Ã© abÄ¾Å¡ÄŒÄŒÄŒÄŒÅ¥Å¾Ã½Ã¡Ã­Ã© abcd  ERTFSSS        ";
 string output = string.Empty;
 
 var specialChars = new ReplaceSpecialCharacters();
@@ -22,7 +22,7 @@ output = specialChars.MakeNiceURL(input);
 
 If you want to call functionality over string (this would use most of you, but please don't forget to add using ReplaceSpecialCharactersLibrary; in your code) :
 
-string input = "    ABCD ef ¾šèıáíé        ";
+string input = "    ABCD ef Ä¾Å¡ÄÅ¥Å¾Ã½Ã¡Ã­Ã©        ";
 string output = string.Empty;
 
 output = input.MakeNiceURL();
