@@ -27,7 +27,7 @@ namespace ReplaceSpecialCharactersLibrary
         /// </returns>
         public string RemoveDiacritics(string inputString)
         {
-            if ((inputString != null) && (!string.IsNullOrWhiteSpace(inputString)))
+            if (!string.IsNullOrWhiteSpace(inputString))
             {
                 inputString = inputString.Normalize(NormalizationForm.FormD);
                 var stringBuilder = new StringBuilder();
@@ -54,7 +54,7 @@ namespace ReplaceSpecialCharactersLibrary
         /// <returns>Processed string.</returns>
         public string ReplaceSpaces(string inputString, string replaceWith = "-")
         {
-            if ((inputString != null) && (!string.IsNullOrWhiteSpace(inputString)) && (!string.IsNullOrWhiteSpace(replaceWith)))
+            if ((!string.IsNullOrWhiteSpace(inputString)) && (!string.IsNullOrWhiteSpace(replaceWith)))
             {
                 var stringBuilder = new StringBuilder(inputString);
                 stringBuilder.Replace(" ", replaceWith);
@@ -86,7 +86,7 @@ namespace ReplaceSpecialCharactersLibrary
         /// <returns>Input string with removed diacritics and removed spaces on start and end.</returns>
         public string TrimAndRemoveDiacritics(string inputString)
         {
-            if ((inputString != null) && (!string.IsNullOrWhiteSpace(inputString)))
+            if (!string.IsNullOrWhiteSpace(inputString))
             {
                 return this.RemoveDiacritics(inputString.Trim());
             }
@@ -102,7 +102,7 @@ namespace ReplaceSpecialCharactersLibrary
         /// <returns>Processed string.</returns>
         public string TrimAndReplaceSpaces(string inputString, string replaceWith = "-")
         {
-            if ((inputString != null) && (!string.IsNullOrWhiteSpace(inputString)) && (!string.IsNullOrWhiteSpace(replaceWith)))
+            if ((!string.IsNullOrWhiteSpace(inputString)) && (!string.IsNullOrWhiteSpace(replaceWith)))
             {
                 if (replaceWith != "-")
                 {
@@ -125,7 +125,7 @@ namespace ReplaceSpecialCharactersLibrary
         /// <returns>Processed string.</returns>
         public string TrimAndRemoveDiacriticsAndReplaceSpaces(string inputString, string replaceWith = "-")
         {
-            if ((inputString != null) && (!string.IsNullOrWhiteSpace(inputString)) && (!string.IsNullOrWhiteSpace(replaceWith)))
+            if ((!string.IsNullOrWhiteSpace(inputString)) && (!string.IsNullOrWhiteSpace(replaceWith)))
             {
                 var outcome = this.RemoveDiacritics(inputString.Trim());
                 outcome = this.ReplaceSpaces(outcome, replaceWith);
@@ -144,7 +144,7 @@ namespace ReplaceSpecialCharactersLibrary
         /// <returns>Processed string.</returns>
         public string MakeNiceURL(string inputString, string replaceWith = "-")
         {
-            if ((inputString != null) && (!string.IsNullOrWhiteSpace(inputString)) && (!string.IsNullOrWhiteSpace(replaceWith)))
+            if ((!string.IsNullOrWhiteSpace(inputString)) && (!string.IsNullOrWhiteSpace(replaceWith)))
             {
                 var outcome = this.RemoveDiacritics(inputString.Trim());
                 outcome = this.ReplaceSpaces(outcome, replaceWith).ToLower();
